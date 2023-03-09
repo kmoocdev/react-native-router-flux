@@ -1,5 +1,6 @@
 import React from 'react';
-import { ViewPropTypes, BackHandler, Linking } from 'react-native';
+import { BackHandler, Linking } from 'react-native';
+import { ViewPropTypes, } from 'deprecated-react-native-prop-types';
 import PropTypes from 'prop-types';
 import NavigationStore from './Store';
 import defaultStore from './defaultStore';
@@ -32,7 +33,7 @@ class App extends React.Component {
 
   componentWillUnmount() {
     BackHandler.removeEventListener('hardwareBackPress', this.props.backAndroidHandler || this.onBackPress);
-    Linking.removeEventListener('url', this.handleDeepURL);
+    //Linking.removeEventListener('url', this.handleDeepURL);
   }
 
   onBackPress = () => this.props.navigationStore.pop();
