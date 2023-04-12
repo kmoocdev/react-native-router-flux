@@ -215,10 +215,10 @@ function createNavigationOptions(params) {
 
     if (typeof navigationParams.panHandlers !== 'undefined') {
       if (navigationParams.panHandlers === null) {
-        res.gesturesEnabled = false;
+        res.gestureEnabled = false;
       }
     } else if (panHandlers === null) {
-      res.gesturesEnabled = false;
+      res.gestureEnabled = false;
     }
 
     if (navigationBarTitleImage) {
